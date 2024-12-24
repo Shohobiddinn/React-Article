@@ -1,11 +1,11 @@
-
 interface ButtonProps {
   children: string;
+  type?: "button" | "submit" | "reset" | "link"; 
 }
 
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ children, type = "button" }: ButtonProps) => {
   return (
-    <button className="btn btn-primary">{children}</button>
+    <button className={`btn btn-sm btn-primary h-0 ${type}`}>{children}</button>
   );
 };
 
