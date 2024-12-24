@@ -5,6 +5,7 @@ import { NotFound } from './components';
 
 const App = () => {
   return (
+    <div className='container mx-auto'>
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         <Route index element={<Home />} />
@@ -13,6 +14,7 @@ const App = () => {
       <Route path="sign-in" element={<SignIn />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </div>
   );
 };
 
