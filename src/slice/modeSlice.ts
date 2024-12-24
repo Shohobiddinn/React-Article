@@ -9,8 +9,8 @@ const initialState: ModeState = {
     theme: 'light',
 }
 
-export const counterSlice = createSlice({
-    name: 'counter',
+export const modeSlice = createSlice({
+    name: 'mode',
     initialState,
     reducers: {
         toggleMode: (state, action: PayloadAction<string>) => {
@@ -28,6 +28,6 @@ export const counterSlice = createSlice({
     },
 })
 
-export const { toggleMode, createTheme } = counterSlice.actions
+export const { toggleMode, createTheme } = modeSlice.actions
 
-export default counterSlice.reducer
+export default modeSlice.reducer
